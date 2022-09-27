@@ -1,0 +1,54 @@
+*,
+::after,
+::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body{
+    display: grid;
+    place-items: center;
+}
+
+.section{
+    text-align: center;
+    padding-top: 50px;
+}
+.form{
+    line-height: 2rem;
+    background: gray;
+    padding: 40px;
+    display: grid;
+    text-align: left;
+    text-transform: capitalize;
+}
+
+.section h4{
+    margin-bottom: 5%;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+.form-text{
+    width: 90%;
+    height: 30px;
+}
+
+.submit-btn{
+    padding: 0.7rem 1.25rem;
+    border-radius: 0;
+    background: blue;
+    color: white;
+    font-weight: bold;
+    font-size: 0.8rem;
+    border: none;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+.submit-btn:hover{
+    background: black;
+    color: red;
+}

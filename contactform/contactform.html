@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="contactform.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>contact form</title>
+    </head>
+    <body>
+        <section class="section">
+            <h4>contact form</h4>
+        <div class="form">
+            
+            <form class="form-container">
+                <div class="form-input">
+                <label>first name</label>
+                <div>
+                <input type="text"  class="form-text">
+                </div>
+                </div>
+                <div class="form-input">
+                    <label>last name</label>
+                    <div>
+                    <input type="text"  class="form-text">
+                </div>
+                    </div>
+                <div class="form-input">
+                    <label>email <span style="color:red ;">*</span></label>
+                    <div>
+                    <input type="text"  class="form-text">
+                </div>
+                </div>
+                <div class="text-area">
+                    <label>message</label>
+                    <div>
+                    <textarea name="text" id="text-message" cols="50" rows="10"></textarea>
+                </div>
+                    </div>
+
+                    <button type="button" class="submit-btn">submit</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    </body>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    <script>    
+    function sendEmail(){
+        var btn = document.querySelector('.submit-btn')
+        btn.addEventListener('click', function(e){
+            e.preventDefault()
+            
+            var firstName = document.getElementById('first-name').value
+            var lastName = document.getElementById('last-name').value
+            var email = document.getElementById('email').value
+            var message = document.getElementById('text-message').value
+            var body = 'firstname: ' +firstName + '<br/> lastname: ' + lastName
+            + '<br/> email: ' + email + '<br/> message: ' + message 
+
+            Email.send({
+            Host : 'smtp.gmail.com',
+            Username : '************',
+            Password : none,
+            To : 'dj125466@gmail.com',
+            From : email,
+            Subject : 'web mail',
+            Body : body,
+        }).then(
+            message => alert(message)
+        );
+    
+        })
+    }
+    </script>
+
+</html>
