@@ -9,8 +9,7 @@
     <body>
         <section class="section">
             <h4>contact form</h4>
-        <div class="form">
-            
+        <div class="form"> 
             <form class="form-container">
                 <div class="form-input">
                 <label>first name</label>
@@ -43,36 +42,4 @@
         </div>
     </section>
     </body>
-
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-
-    <script>    
-    function sendEmail(){
-        var btn = document.querySelector('.submit-btn')
-        btn.addEventListener('click', function(e){
-            e.preventDefault()
-            
-            var firstName = document.getElementById('first-name').value
-            var lastName = document.getElementById('last-name').value
-            var email = document.getElementById('email').value
-            var message = document.getElementById('text-message').value
-            var body = 'firstname: ' +firstName + '<br/> lastname: ' + lastName
-            + '<br/> email: ' + email + '<br/> message: ' + message 
-
-            Email.send({
-            Host : 'smtp.gmail.com',
-            Username : '************',
-            Password : none,
-            To : 'dj125466@gmail.com',
-            From : email,
-            Subject : 'web mail',
-            Body : body,
-        }).then(
-            message => alert(message)
-        );
-    
-        })
-    }
-    </script>
-
 </html>
